@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>The Psychic Game
+  </title>
+</head>
+
+<body>
+
+  <div id="game">
+    <h1>The Psychic Game</h1>
+    <h2>Wins:</h2><span id="userScore">___</span>
+    <h2>Losses:</h2><span id="computerScore">___</span>
+    <h2>Guesses Left:</h2><span id="guessesLeft">___</span>
+    <h2>Guesses So Far:</h2><span id="guesses">___</span>
+   
+   
+    
+  </div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (a-z).
+    var computerChoices = ["a"];
+    // , "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+    // players letter Guess
+    var userGuess = document.getElementById("userGuess");
+    // the letters guessed so far
+    // var num_games = document.getElementById("guesses");
+    
+    // games won by user, starts at 0
+    var userScore = document.getElementById("userScore");
+    var userScore_count = 0;
+    // games won by computer, starts at 0
+    var computerScore = document.getElementById("computerScore");
+    var computerScore_count = 0;
+    // number of changes player has left to guess the letter, starts at 9
+    var guessesLeft = document.getElementById("guessesLeft");
+    var guessesLeft_count = 9;
+    // the letters the player has guessed so far
+    var guesses = document.getElementById("guesses");
+    var guesses = 0;
+    // 
+    // 
+    
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+    // Randomly chooses a choice from the options array. This is the Computer's guess.
+       
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      
+      // Alerts the key the user pressed (userGuess).
+      userText.textContent = userGuess;
+
+      // alert("User guess: " + userGuess);
+
+      // Alerts the Computer's guess.
+      computerText.textContent = computerGuess;
+      // alert("Computer guess: " + computerGuess);
+      
+      if (userGuess == computerGuess) {userScore.textContent = "Win!";} 
+      
+      else if( 
+
+      )
+
+
+
+    //   letter is clicked 
+    //      -computerChoices selects random letter
+    //      -equals to ComputerGuess 
+    //      -UserGuess equals onkeyup.event.key;
+
+    //      -Computer
+      
+
+
+    //   else if (userGuess == "r") {
+
+    //       if (computerGuess == "s") {
+    //         userScore_count = userScore_count + 1;
+    //         // userScore_count ++;
+    //         result.textContent = "WIN";
+    //         console.log(userScore_count);
+    //       } else if (computerGuess == "p") {
+    //         computerScore_count = computerScore_count + 1;
+    //         result.textContent = "YOU LOSE";
+    //       }
+      
+    //   } 
+    //    else if (userGuess == "p") {
+    //    if (computerGuess == "r") {
+    //     userScore_count = userScore_count + 1;
+    //     result.textContent = "WIN";
+    //     console.log(userScore_count);
+    //    } else if (computerGuess == "s") {
+    //     computerScore_count = computerScore_count + 1;
+    //     result.textContent = "YOU LOSE";
+    //    }
+    //  } else if (userGuess == "s") {
+    //    if (computerGuess == "p") {
+    //     userScore_count ++;
+    //     result.textContent = "WIN";
+    //    } else if (computerGuess == "r") {
+    //     computerScore_count = computerScore_count + 1;
+    //     result.textContent = "YOU LOSE";
+    //    }
+    //  } else {
+    //    result.textContent = "WRONG";
+    //  }
+
+     num_games_count ++;
+     num_games.textContent = num_games_count;
+     userScore.textContent = userScore_count;
+     computerScore.textContent = computerScore_count;
+    };
+  </script>
+
+</body>
+
+</html>
